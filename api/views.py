@@ -74,9 +74,9 @@ def deleteNote(request,pk):
 
 #ADDED EXTRA VIEW
 @api_view(['GET'])
-def getprofile(request, mail):
-    profile = profiles.objects.get(email=mail)  # from database
-    serializer = profileSerializer(profile, many=False)
+def getprofiles(request):
+    profile = profiles.objects.all()  # from database
+    serializer = profileSerializer(profile, many=True)
     return Response(serializer.data)
 
 
@@ -96,6 +96,23 @@ def createprofile(request):
     )
     serializer = profileSerializer(note, many=False)
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getprofile(request, e):
+    profile = profiles.objects.get(email=e)  # from database
+    serializer = profileSerializer(profile, many=False)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getcities(request):
+    profile = profiles.objects.all()  # from database
+    serializer = profileSerializer(profile, many=True)
+    return Response(serializer.data)
+
+
+
 
 
 
