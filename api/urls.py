@@ -11,7 +11,10 @@ urlpatterns = [
     path('notes/<str:pk>/delete/',views.deleteNote),
     path('notes/<str:pk>/',views.getNote),
     path('profile/create/', views.createprofile),
-    path('profile/<str:email>/', views.getprofile)
+    path('profiles/',views.getprofiles),
+    path('profiles/<str:e>', views.getprofile)
+
+    
 
     
 ]
