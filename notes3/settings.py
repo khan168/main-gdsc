@@ -87,7 +87,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sltkvxfj',
         'USER': 'sltkvxfj',
-        'PASSWORD': 'P7VlviIQ_pWog4nRHhrnX1lrsFsf-WV_'
+        'PASSWORD': 'P7VlviIQ_pWog4nRHhrnX1lrsFsf-WV_',
+        'HOST': 'salt.db.elephantsql.com',
+        'PORT':'5432'
     },
         
     }
