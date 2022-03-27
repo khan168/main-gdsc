@@ -16,6 +16,7 @@ class Note(models.Model):
 
 #made chnage from here
 class profiles(models.Model):
+    uid=models.CharField(max_length=50,default='')
     password = models.CharField(max_length=30)
     email = models.CharField(max_length=50)
     name = models.CharField(max_length=80, default='name')
