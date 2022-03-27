@@ -25,6 +25,7 @@ class profiles(models.Model):
     picUrl = models.CharField(max_length=200, default='xyz.jpeg')
     workingHours = models.CharField(max_length=30, default='6-12am')
     city = models.CharField(max_length=80, default='tampa')
+    item = models.CharField(max_length=100,default='')
 
     def __str__(self):
         return self.name
