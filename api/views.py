@@ -91,6 +91,8 @@ def createprofile(request):
         phone=data['phone'],
         workingHours=data['workingHours'],
         city=data['city'],
+        items=data['items'],
+        uid=data['uid'],
 
 
     )
