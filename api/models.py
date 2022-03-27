@@ -16,6 +16,7 @@ class Note(models.Model):
 
 #made chnage from here
 class profiles(models.Model):
+    uid=models.CharField(max_length=50,default='')
     password = models.CharField(max_length=30)
     email = models.CharField(max_length=50)
     name = models.CharField(max_length=80, default='name')
@@ -24,6 +25,7 @@ class profiles(models.Model):
     picUrl = models.CharField(max_length=200, default='xyz.jpeg')
     workingHours = models.CharField(max_length=30, default='6-12am')
     city = models.CharField(max_length=80, default='tampa')
+    item = models.CharField(max_length=100,default='')
 
     def __str__(self):
         return self.name

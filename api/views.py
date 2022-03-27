@@ -91,6 +91,8 @@ def createprofile(request):
         phone=data['phone'],
         workingHours=data['workingHours'],
         city=data['city'],
+        uid=data['uid'],
+        item=data['item'],
 
 
     )
@@ -110,6 +112,14 @@ def getcities(request):
     profile = profiles.objects.all()  # from database
     serializer = profileSerializer(profile, many=True)
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getIns_city(request,city):
+    profile = profiles.objects.filter(city__iexact=city)  # from database
+    serializer = profileSerializer(profile, many=True)
+    return Response(serializer.data)
+
 
 
 
